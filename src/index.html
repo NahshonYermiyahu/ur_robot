@@ -17,7 +17,7 @@
       <div class="header-left">
         <div class="header__logo">
           <a href="#">
-            <img src="icons/Слой 2 2.png" alt="Слой 2 2" />
+            <img src="icons/Слой_2_2.png" alt="Слой 2 2" />
           </a>
         </div>
 
@@ -49,11 +49,11 @@
 
       <div class="header-right">
         <div class="header__new-email">
-          <img src="icons/new-email 1.png" alt="new-email" />
+          <img src="icons/new-email_1.png" alt="new-email" />
         </div>
 
         <div class="header__notification">
-          <img src="icons/notification 1.png" alt="notification " />
+          <img src="icons/notification_1.png" alt="notification " />
         </div>
 
         <div class="header__user dropdown">
@@ -64,36 +64,76 @@
               <p class="header__user-sum">50 300 ₽</p>
             </div>
             <div class="header__user-arrow">
-              <img src="icons/Arrow - Up 5.png" alt="arrow" />
+              <img src="icons/Arrow - Up_5.png" alt="arrow" />
             </div>
           </div>
 
           <div class="dropdown-content">
-            <div>
-              <a href="#">Link 1</a>
+            <div class="dropdown-chekbox">
+              <p>Изменение темы</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
             </div>
             <div>
-              <a href="#">Сменить пароль</a>
+              <button class="dropdown-btn" type="button">Сменить пароль</button>
             </div>
             <div>
-              <a href="#">Выход</a>
+              <button class="dropdown-btn" type="button">Выход</button>
             </div>
           </div>
         </div>
 
         <div class="header__logout">
-          <img src="icons/logout 1.png" alt="logout" />
+          <button type="button">
+            <img src="icons/logout_1.png" alt="logout" />
+          </button>
         </div>
       </div>
-
-      <!-- <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div> -->
     </header>
+    <!-- /.header -->
+
+    <div class="container">
+      <section class="sidebar">
+        <div class="sidebar__item">
+          <div class="sidebar__item-img">
+            <img src="icons/Category.png" alt="category" />
+          </div>
+          <button type="button" class="sidebar__item-btn">Рабочий стол</button>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item-img">
+            <img src="icons/3_User.png" alt="category" />
+          </div>
+          <button type="button" class="sidebar__item-btn">Организации</button>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item-img">
+            <img src="icons/Work.png" alt="category" />
+          </div>
+          <button type="button" class="sidebar__item-btn">
+            Работа с должниками
+          </button>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item-img">
+            <img src="icons/change_1.png" alt="category" />
+          </div>
+          <button type="button" class="sidebar__item-btn">Обмен данными</button>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item-img">
+            <img src="icons/levels_1.png" alt="category" />
+          </div>
+          <button type="button" class="sidebar__item-btn">
+            Панель управления
+          </button>
+        </div>
+      </section>
+      <!-- /.sidebar -->
+      <section class="content"></section>
+      <!-- /.content -->
+    </div>
   </body>
 </html>

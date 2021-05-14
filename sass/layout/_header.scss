@@ -115,12 +115,98 @@
         box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
           0 5.5px 5px rgba(0, 0, 0, 0.237602);
         border-radius: 0 0 10px 10px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0.04em;
-        text-align: left;
-        color: #e0e0e0;
+
+        .dropdown-chekbox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 17px;
+          letter-spacing: 0.04em;
+          text-align: left;
+          color: #e0e0e0;
+          height: 57px;
+          padding: 0 27px 0 30px;
+
+          .switch {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+          }
+
+          .switch input {
+            display: none;
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+          }
+
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 1px;
+            bottom: 1px;
+            background-color: white;
+            background-image: url("../../icons/sun1.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+          }
+
+          input:checked + .slider {
+            background-color: #2196f3;
+          }
+
+          input:focus + .slider {
+            box-shadow: 0 0 1px #2196f3;
+          }
+
+          input:checked + .slider:before {
+            -webkit-transform: translateX(14px);
+            -ms-transform: translateX(14px);
+            transform: translateX(14px);
+          }
+
+          .slider.round {
+            border-radius: 15px;
+          }
+
+          .slider.round:before {
+            border-radius: 50%;
+          }
+        }
+
+        .dropdown-btn {
+          width: 100%;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 17px;
+          letter-spacing: 0.04em;
+          text-align: left;
+          color: #e0e0e0;
+          height: 37px;
+          padding-left: 30px;
+
+          &:hover {
+            background-color: #21317a;
+          }
+        }
       }
     }
 
