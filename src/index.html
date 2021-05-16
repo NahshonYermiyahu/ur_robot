@@ -48,28 +48,81 @@
       </div>
 
       <div class="header-right">
-        <div class="header__new-email">
-          <img src="icons/new-email_1.png" alt="new-email" />
+        <div class="header__email dropdown-email">
+          <div class="header__email-1">
+            <img src="icons/mail_1.png" alt="email" />
+          </div>
+
+          <div class="header__new-email-1">
+            <img src="icons/new-email_1.png" alt="email" />
+          </div>
+
+          <div class="header__new-email-4">
+            <img src="icons/new-email_4.png" alt="email" />
+          </div>
+
+          <div class="dropdown-email__content">
+            <div class="dropdown-email__item">
+              <div class="dropdown-email__item-left">
+                <img src="icons/Ellipse_8.png" alt="ellipse" />
+              </div>
+              <div class="dropdown-email__item-right">
+                <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                <div class="dropdown-email__item-text">
+                  <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                </div>
+                <div class="dropdown-email__item-date">
+                  <p class="dropdown-email__item-day">19.03.2021</p>
+                  <p class="dropdown-email__item-time">09:43</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-email__item">
+              <div class="dropdown-email__item-left">
+                <img src="icons/Ellipse_8.png" alt="ellipse" />
+              </div>
+              <div class="dropdown-email__item-right">
+                <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                <div class="dropdown-email__item-text">
+                  <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                </div>
+                <div class="dropdown-email__item-date">
+                  <p class="dropdown-email__item-day">19.03.2021</p>
+                  <p class="dropdown-email__item-time">09:43</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="header__notification">
-          <img src="icons/notification_1.png" alt="notification " />
+        <div class="header__bell">
+          <img src="icons/bell_1.png" alt="bell" />
         </div>
 
-        <div class="header__user dropdown">
+        <div class="header__notification_1">
+          <img src="icons/notification_1.png" alt="bell" />
+        </div>
+
+        <div class="header__notification_4">
+          <img src="icons/notification_4.png" alt="bell" />
+        </div>
+
+        <div class="header__user dropdown__user">
           <div class="header__user-data">
             <img src="icons/avatar.png" alt="avatar" />
             <div class="header__user-block">
               <p class="header__user-name">МП ГПЩ "ДЕЗ ЖКХ"</p>
               <p class="header__user-sum">50 300 ₽</p>
             </div>
-            <div class="header__user-arrow">
-              <img src="icons/Arrow - Up_5.png" alt="arrow" />
-            </div>
+            <button
+              onclick="dropdownUser()"
+              class="header__user-arrow"
+            ></button>
           </div>
 
-          <div class="dropdown-content">
-            <div class="dropdown-chekbox">
+          <div id="dropdown-user" class="dropdown__user-content">
+            <div class="chekbox">
               <p>Изменение темы</p>
               <label class="switch">
                 <input type="checkbox" />
@@ -77,10 +130,12 @@
               </label>
             </div>
             <div>
-              <button class="dropdown-btn" type="button">Сменить пароль</button>
+              <button class="dropdown__user-btn" type="button">
+                Сменить пароль
+              </button>
             </div>
             <div>
-              <button class="dropdown-btn" type="button">Выход</button>
+              <button class="dropdown__user-btn" type="button">Выход</button>
             </div>
           </div>
         </div>
@@ -96,44 +151,61 @@
 
     <div class="container">
       <section class="sidebar">
-        <div class="sidebar__item">
-          <div class="sidebar__item-img">
-            <img src="icons/Category.png" alt="category" />
+        <div class="sidebar-items">
+          <div class="sidebar__item">
+            <div class="sidebar__item-img">
+              <img src="icons/Category.png" alt="category" />
+            </div>
+            <button type="button" class="sidebar__item-btn">
+              Рабочий стол
+            </button>
           </div>
-          <button type="button" class="sidebar__item-btn">Рабочий стол</button>
+          <div class="sidebar__item">
+            <div class="sidebar__item-img">
+              <img src="icons/3_User.png" alt="category" />
+            </div>
+            <button type="button" class="sidebar__item-btn">Организации</button>
+          </div>
+          <div class="sidebar__item">
+            <div class="sidebar__item-img">
+              <img src="icons/Work.png" alt="category" />
+            </div>
+            <button type="button" class="sidebar__item-btn">
+              Работа с должниками
+            </button>
+          </div>
+          <div class="sidebar__item">
+            <div class="sidebar__item-img">
+              <img src="icons/change_1.png" alt="category" />
+            </div>
+            <button type="button" class="sidebar__item-btn">
+              Обмен данными
+            </button>
+          </div>
+          <div class="sidebar__item">
+            <div class="sidebar__item-img">
+              <img src="icons/levels_1.png" alt="category" />
+            </div>
+            <button type="button" class="sidebar__item-btn">
+              Панель управления
+            </button>
+          </div>
         </div>
-        <div class="sidebar__item">
-          <div class="sidebar__item-img">
-            <img src="icons/3_User.png" alt="category" />
-          </div>
-          <button type="button" class="sidebar__item-btn">Организации</button>
-        </div>
-        <div class="sidebar__item">
-          <div class="sidebar__item-img">
-            <img src="icons/Work.png" alt="category" />
-          </div>
-          <button type="button" class="sidebar__item-btn">
-            Работа с должниками
-          </button>
-        </div>
-        <div class="sidebar__item">
-          <div class="sidebar__item-img">
-            <img src="icons/change_1.png" alt="category" />
-          </div>
-          <button type="button" class="sidebar__item-btn">Обмен данными</button>
-        </div>
-        <div class="sidebar__item">
-          <div class="sidebar__item-img">
-            <img src="icons/levels_1.png" alt="category" />
-          </div>
-          <button type="button" class="sidebar__item-btn">
-            Панель управления
-          </button>
+
+        <div class="sidebar__footer">
+          <p>
+            &copy; Юрробот 2017-2021<br />
+            &nbsp; &nbsp; Версия 1.4.2 (pre-release)
+          </p>
         </div>
       </section>
       <!-- /.sidebar -->
-      <section class="content"></section>
+      <section class="content">
+        <button type="button" class="content__sidebar"></button>
+      </section>
       <!-- /.content -->
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
