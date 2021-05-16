@@ -5,4 +5,48 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  padding-left: 55px;
+  padding-top: 90px;
+
+  .content__sidebar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: #ffffff;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
+    background-image: url("../../icons/next_left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .content__body {
+    width: 1480px;
+
+    .search-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 40px;
+      height: 60px;
+
+      .search {
+        width: 40px;
+        height: 40px;
+        background-color: #21317a;
+        border-radius: 10px;
+        background-image: url("../../icons/search_1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      div {
+        display: flex;
+      }
+    }
+  }
 }
