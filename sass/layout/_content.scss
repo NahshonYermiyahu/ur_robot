@@ -1,13 +1,14 @@
 .content {
-  width: 1640px;
+  // width: 1640px;
   height: 100%;
-  background-image: url("../../img/Background.png");
+  background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   padding-left: 55px;
   padding-top: 90px;
+  flex: 1 1 50%;
 
   .content__sidebar {
     position: absolute;
@@ -18,9 +19,14 @@
     border-radius: 60%;
     background-color: #ffffff;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
-    background-image: url("../../icons/next_left.png");
+    background-image: url("../icons/next_left.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    &.changeSidebar {
+      background-color: #21317a;
+      background-image: url("../icons/next_right.png");
+    }
   }
 
   .content__body {
@@ -46,6 +52,31 @@
 
       div {
         display: flex;
+      }
+    }
+  }
+}
+
+.light-theme {
+  .content {
+    background-color: rgba(56, 158, 224, 0.1);
+  }
+}
+
+.dark-theme {
+  .content {
+    background-color: rgba(15, 13, 10, 0.65);
+
+    .content__body {
+      h1 {
+        color: #f2f2f2;
+      }
+
+      .search-buttons {
+        .btn-body-bridht {
+          color: #ffffff;
+          border: 1px solid #f2f2f2;
+        }
       }
     }
   }

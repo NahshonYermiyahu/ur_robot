@@ -65,28 +65,24 @@
   text-align: left;
   transition-property: background-color, box-shadow, border, color;
   transition-duration: 0.3s;
-
-  &:hover {
-    border: none;
-    background-color: #21317a;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-  }
-
-  &:active {
-    border: none;
-    background-color: #00082f;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
-  }
 }
 
 .btn-body-dark {
   background-color: #21317a;
   color: #ffffff;
   margin-right: 30px;
+
+  &:hover {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: #00082f;
+  }
 }
 
 .btn-body-bridht {
-  background-color: rgba(56, 158, 224, 0.1);
+  background-color: transparent;
   color: #000000;
   border: 1px solid #828282;
 
@@ -94,5 +90,10 @@
     background-color: #21317a;
     color: #ffffff;
     border: none;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: #00082f;
   }
 }

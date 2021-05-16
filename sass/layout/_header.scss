@@ -49,49 +49,30 @@
     .header__email {
       margin-right: 31px;
 
-      .header__email-icons {
-        height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .header__email-1 {
+        width: 26px;
+        height: 26px;
+        background-image: url("../icons/mail_1.png");
 
-        .header__email-1 {
-          display: block;
-        }
-
-        .header__new-email-1 {
-          display: none;
-        }
-
-        .header__new-email-4 {
-          display: none;
-        }
-
-        &:hover .header__email-1 {
-          display: none;
-        }
-
-        &:hover .header__new-email-4 {
-          display: block;
-        }
-
-        &:hover .dropdown-email__content {
-          opacity: 1;
+        &:hover {
+          background-image: url("../../icons/new-email_4.png");
         }
       }
     }
 
-    // .header__email-icons:
-
     .dropdown-email {
       position: relative;
 
+      &:hover .dropdown-email__content {
+        display: block;
+      }
+
       .dropdown-email__content {
-        opacity: 0;
+        display: none;
         overflow: hidden;
         position: absolute;
         left: -75px;
-        top: 100%;
+        top: 73px;
         z-index: 1;
         width: 170px;
         height: 155px;
@@ -100,7 +81,7 @@
         box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
           0 5.5px 5px rgba(0, 0, 0, 0.237602);
         border-radius: 0 0 10px 10px;
-        transition: all 0.2s;
+        transition: all 2s;
 
         .dropdown-email__item {
           display: flex;
@@ -154,8 +135,14 @@
     }
 
     .header__bell {
+      width: 25px;
+      height: 25px;
+      background-image: url("../icons/bell_1.png");
       margin-right: 43px;
-      display: block;
+
+      &:hover {
+        background-image: url("../icons/notification_4.png");
+      }
     }
 
     .header__notification_1 {

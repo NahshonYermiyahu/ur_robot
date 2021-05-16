@@ -49,9 +49,9 @@ button {
 
 .container {
   max-width: 100%;
-  // height: calc(100vh - 120px);
   height: 830px;
   display: flex;
+  position: relative;
 }
 
 ::selection {
