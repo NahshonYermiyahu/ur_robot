@@ -10,9 +10,7 @@
 
   &.minSidebar {
     width: 70px;
-    .sidebar__item-btn {
-      display: none;
-    }
+    padding-left: 20px;
 
     .sidebar__footer {
       display: none;
@@ -46,6 +44,10 @@
 
       &.activeSidebar {
         font-weight: 600;
+      }
+
+      &.changeBtnSidebar {
+        display: none;
       }
     }
   }

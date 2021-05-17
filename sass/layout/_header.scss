@@ -12,6 +12,10 @@
 
     .header__logo {
       margin-right: 109px;
+
+      @media only screen and (max-width: 1760px) {
+        margin-right: 59px;
+      }
     }
 
     .header__info:not(:nth-child(6)) {
@@ -20,6 +24,10 @@
 
     .header__info {
       width: max-content;
+
+      @media only screen and (max-width: 1280px) {
+        display: none;
+      }
 
       .header__info-number {
         font-size: 18px;

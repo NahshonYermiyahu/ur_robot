@@ -1,7 +1,5 @@
 .content {
-  // width: 1640px;
   height: 100%;
-  background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9,6 +7,10 @@
   padding-left: 55px;
   padding-top: 90px;
   flex: 1 1 50%;
+
+  &.content-max {
+    padding-left: 140px;
+  }
 
   .content__sidebar {
     position: absolute;
@@ -32,6 +34,14 @@
   .content__body {
     width: 1480px;
 
+    @media only screen and (max-width: 1760px) {
+      width: 1297px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      width: 940px;
+    }
+
     .search-buttons {
       display: flex;
       flex-direction: row;
@@ -45,7 +55,7 @@
         height: 40px;
         background-color: #21317a;
         border-radius: 10px;
-        background-image: url("../../icons/search_1.png");
+        background-image: url("../icons/search_1.png");
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -59,13 +69,15 @@
 
 .light-theme {
   .content {
-    background-color: rgba(56, 158, 224, 0.1);
+    // background-color: rgba(56, 158, 224, 0.1);
+    background-image: url("../img/bg_light.png");
   }
 }
 
 .dark-theme {
   .content {
-    background-color: rgba(15, 13, 10, 0.65);
+    // background-color: rgba(15, 13, 10, 0.65);
+    background-image: url("../img/bg_dark.png");
 
     .content__body {
       h1 {
