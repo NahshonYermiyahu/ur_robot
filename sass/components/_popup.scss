@@ -68,6 +68,12 @@
       margin: 102px auto auto;
       width: 700px;
       height: 604px;
+
+      @media only screen and (max-width: 360px) {
+        width: 340px;
+        height: 720px;
+      }
+
       .popup__content-items {
         height: 420px;
         overflow-y: scroll;
@@ -133,16 +139,27 @@
       margin: 180px auto auto;
       width: 600px;
       height: 150px;
+
+      @media only screen and (max-width: 1280px) {
+        width: 528px;
+      }
+
+      @media only screen and (max-width: 360px) {
+        width: 340px;
+      }
+
       .popup__content-header {
         position: relative;
         z-index: 999;
         height: 45px;
         justify-content: flex-end;
+
         .popup__close {
           margin-right: 15px;
           margin-top: 15px;
         }
       }
+
       .popup__content-items {
         position: absolute;
         left: 0;
@@ -171,6 +188,16 @@
       margin: 102px auto auto;
       width: 400px;
       height: 289px;
+
+      @media only screen and (max-width: 1280px) {
+        width: 380px;
+      }
+
+      @media only screen and (max-width: 360px) {
+        width: 340px;
+        height: 352px;
+      }
+
       .popup__content-header {
         .content__header-title {
           margin-left: 25px;
@@ -209,6 +236,11 @@
       .popup__content-footer {
         padding: 0 25px;
         justify-content: space-between;
+
+        @media only screen and (max-width: 360px) {
+          display: block;
+        }
+
         .btn {
           display: flex;
           align-items: center;
@@ -315,7 +347,9 @@
             .item__input {
               color: #828282;
               background: #e0e0e0;
-              &::placeholder {color: #828282;}
+              &::placeholder {
+                color: #828282;
+              }
             }
           }
         }
@@ -361,7 +395,7 @@
               color: #e0e0e0;
             }
             &.selected {
-              background: #389EE040;
+              background: #389ee040;
               .item__description {
                 color: #f2f2f2;
               }
@@ -370,7 +404,7 @@
               }
             }
             &:hover {
-              background: #389EE040;
+              background: #389ee040;
             }
           }
         }
@@ -379,7 +413,7 @@
         .popup__content-items {
           .item {
             .item__description {
-              color: #F2F2F2;
+              color: #f2f2f2;
             }
           }
         }
@@ -388,9 +422,11 @@
         .popup__content-items {
           .item {
             .item__input {
-              color: #F2F2F2;
+              color: #f2f2f2;
               background: #4f4f4f;
-              &::placeholder {color: #F2F2F2;}
+              &::placeholder {
+                color: #f2f2f2;
+              }
             }
           }
         }
@@ -400,14 +436,14 @@
 }
 
 // !ТОЛЬКО ДЛЯ ТЕСТОВ!!!!
-.light-theme{
-  #theme{
+.light-theme {
+  #theme {
     background-color: #ffffff;
     color: #000000;
   }
 }
-.dark-theme{
-  #theme{
+.dark-theme {
+  #theme {
     background-color: #000000;
     color: #ffffff;
   }
