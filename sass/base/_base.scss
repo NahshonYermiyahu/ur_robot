@@ -52,6 +52,10 @@ button {
   height: 830px;
   display: flex;
   position: relative;
+
+  @media only screen and (max-width: 360px) {
+    display: block;
+  }
 }
 
 ::selection {

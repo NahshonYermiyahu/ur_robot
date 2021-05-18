@@ -79,8 +79,10 @@ function changeSidebar(btn) {
     }
   } else {
     for (let i of btns2) {
-      i.classList.remove("activeMinSidebar");
-      i.classList.remove("activeSidebar");
+      if (i.classList.contains("activeMinSidebar")) {
+        i.classList.remove("activeMinSidebar");
+        i.classList.remove("activeSidebar");
+      }
     }
   }
 
