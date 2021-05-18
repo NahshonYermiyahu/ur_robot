@@ -4,6 +4,11 @@
   max-height: 557px;
   margin-top: 20px;
 
+  @media only screen and (max-width: 360px) {
+    max-height: 340px;
+    width: 100vw;
+  }
+
   .main-table {
     width: 100%;
     border-collapse: collapse;
@@ -101,6 +106,10 @@
 
       @media only screen and (max-width: 1280px) {
         width: 207px;
+
+        p {
+          width: 125px;
+        }
       }
     }
 
@@ -292,8 +301,20 @@
     overflow-y: scroll;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 0 0 10px 10px;
+
+    @media only screen and (max-width: 360px) {
+      overflow-x: scroll;
+    }
+
     &::-webkit-scrollbar {
       width: 0;
+      height: 5px;
+      background-color: #f2f2f2;
+
+      &-thumb {
+        background: #b8d7eb;
+        border-radius: 10px;
+      }
     }
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */

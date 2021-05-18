@@ -15,11 +15,9 @@
   <body class="light-theme">
     <header id="header" class="header">
       <div class="header-left">
-        <div class="header__logo">
-          <a href="#">
-            <img src="icons/Слой_2_2.png" alt="Слой 2 2" />
-          </a>
-        </div>
+        <a href="#">
+          <div class="header__logo"></div>
+        </a>
 
         <div class="header__info">
           <p class="header__info-number">132178469</p>
@@ -94,7 +92,8 @@
 
         <div class="header__user dropdown__user">
           <div class="header__user-data">
-            <img src="icons/avatar.png" alt="avatar" />
+            <div class="header__user-img"></div>
+            <!-- <img src="icons/avatar.png" alt="avatar" /> -->
             <div class="header__user-block">
               <p class="header__user-name">МП ГПЩ "ДЕЗ ЖКХ"</p>
               <p class="header__user-sum">50 300 ₽</p>
@@ -125,9 +124,7 @@
         </div>
 
         <div class="header__logout">
-          <button type="button">
-            <img src="icons/logout_1.png" alt="logout" />
-          </button>
+          <button type="button"></button>
         </div>
       </div>
     </header>
@@ -137,9 +134,7 @@
       <section id="sidebar" class="sidebar">
         <div class="sidebar-items">
           <div class="sidebar__item">
-            <div class="sidebar__item-img">
-              <img src="icons/Category.png" alt="category" />
-            </div>
+            <div class="sidebar__item-img img1"></div>
             <button
               onclick="sidebarBtn(this)"
               type="button"
@@ -149,7 +144,7 @@
             </button>
           </div>
           <div class="sidebar__item">
-            <div class="sidebar__item-img">
+            <div class="sidebar__item-img img2">
               <img src="icons/3_User.png" alt="category" />
             </div>
             <button
@@ -161,7 +156,7 @@
             </button>
           </div>
           <div class="sidebar__item">
-            <div class="sidebar__item-img">
+            <div class="sidebar__item-img img3">
               <img src="icons/Work.png" alt="category" />
             </div>
             <button
@@ -173,7 +168,7 @@
             </button>
           </div>
           <div class="sidebar__item">
-            <div class="sidebar__item-img">
+            <div class="sidebar__item-img img4">
               <img src="icons/change_1.png" alt="category" />
             </div>
             <button
@@ -185,7 +180,7 @@
             </button>
           </div>
           <div class="sidebar__item">
-            <div class="sidebar__item-img">
+            <div class="sidebar__item-img img5">
               <img src="icons/levels_1.png" alt="category" />
             </div>
             <button
@@ -700,6 +695,71 @@
               </table>
             </div>
           </div>
+
+          <!-- <div class="sidebar-360">
+            <div class="sidebar-items">
+              <div class="sidebar__item">
+                <div class="sidebar__item-img">
+                  <img src="icons/Category.png" alt="category" />
+                </div>
+                <button
+                  onclick="sidebarBtn(this)"
+                  type="button"
+                  class="sidebar__item-btn"
+                >
+                  Рабочий стол
+                </button>
+              </div>
+              <div class="sidebar__item">
+                <div class="sidebar__item-img">
+                  <img src="icons/3_User.png" alt="category" />
+                </div>
+                <button
+                  onclick="sidebarBtn(this)"
+                  type="button"
+                  class="sidebar__item-btn"
+                >
+                  Организации
+                </button>
+              </div>
+              <div class="sidebar__item">
+                <div class="sidebar__item-img">
+                  <img src="icons/Work.png" alt="category" />
+                </div>
+                <button
+                  onclick="sidebarBtn(this)"
+                  type="button"
+                  class="sidebar__item-btn"
+                >
+                  Работа с должниками
+                </button>
+              </div>
+              <div class="sidebar__item">
+                <div class="sidebar__item-img">
+                  <img src="icons/change_1.png" alt="category" />
+                </div>
+                <button
+                  onclick="sidebarBtn(this)"
+                  type="button"
+                  class="sidebar__item-btn"
+                >
+                  Обмен данными
+                </button>
+              </div>
+              <div class="sidebar__item">
+                <div class="sidebar__item-img">
+                  <img src="icons/levels_1.png" alt="category" />
+                </div>
+                <button
+                  onclick="sidebarBtn(this)"
+                  type="button"
+                  class="sidebar__item-btn"
+                >
+                  Панель управления
+                </button>
+              </div>
+            </div>
+          </div> -->
         </div>
       </section>
       <!-- /.content -->

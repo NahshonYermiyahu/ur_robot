@@ -65,12 +65,20 @@
   text-align: left;
   transition-property: background-color, box-shadow, border, color;
   transition-duration: 0.3s;
+
+  @media only screen and (max-width: 1280px) {
+    height: 50px;
+  }
 }
 
 .btn-body-dark {
   background-color: #21317a;
   color: #ffffff;
   margin-right: 30px;
+
+  @media only screen and (max-width: 360px) {
+    margin-right: 0;
+  }
 
   &:hover {
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);

@@ -8,6 +8,16 @@
   padding-top: 90px;
   flex: 1 1 50%;
 
+  @media only screen and (max-width: 1280px) {
+    padding-left: 30px;
+    padding-top: 55px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
   &.content-max {
     padding-left: 140px;
   }
@@ -25,6 +35,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @media only screen and (max-width: 1100px) {
+      display: none;
+    }
+
     &.changeSidebar {
       background-color: #21317a;
       background-image: url("../icons/next_right.png");
@@ -40,6 +54,28 @@
 
     @media only screen and (max-width: 1280px) {
       width: 940px;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0.04em;
+        text-align: left;
+      }
+    }
+
+    @media only screen and (max-width: 360px) {
+      width: 100%;
+      // padding: 0;
+
+      h1 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        margin-left: 10px;
+      }
     }
 
     .search-buttons {
@@ -50,6 +86,14 @@
       margin-top: 40px;
       height: 60px;
 
+      @media only screen and (max-width: 360px) {
+        width: 100vw;
+        padding: 0 10px;
+        margin-top: 30px;
+        height: 110px;
+        align-items: center;
+      }
+
       .search {
         width: 40px;
         height: 40px;
@@ -58,10 +102,28 @@
         background-image: url("../icons/search_1.png");
         background-repeat: no-repeat;
         background-position: center;
+
+        @media only screen and (max-width: 1760px) {
+          background-image: url("../icons/search_2.png");
+        }
+
+        @media only screen and (max-width: 1280px) {
+          width: 30px;
+          height: 30px;
+          background-image: url("../icons/search_3.png");
+        }
       }
 
       div {
         display: flex;
+
+        @media only screen and (max-width: 360px) {
+          display: block;
+
+          button:nth-of-type(2) {
+            margin-top: 10px;
+          }
+        }
       }
     }
   }
