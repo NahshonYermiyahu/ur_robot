@@ -5,19 +5,19 @@
   margin-top: 20px;
 
   @media only screen and (max-width: 360px) {
-    height: 340px;
+    // height: 340px;
     width: 100vw;
     border-radius: 10px;
   }
 
   .table {
     width: max-content;
-    height: 557px;
+    max-height: 100%;
     overflow-x: auto;
 
     @media only screen and (max-width: 360px) {
       width: 100vw;
-      max-height: 306px;
+      // max-height: 306px;
     }
 
     .search-box {
