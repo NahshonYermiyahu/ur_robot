@@ -21,6 +21,7 @@
   @media only screen and (max-width: 360px) {
     padding-left: 0;
     padding-top: 30px;
+    height: 763px;
   }
 
   &.content-max {
@@ -110,6 +111,7 @@
         background-image: url("../icons/search_1.png");
         background-repeat: no-repeat;
         background-position: center;
+        transition: background 0.3s;
 
         @media only screen and (max-width: 1680px) {
           background-image: url("../icons/search_2.png");
@@ -119,6 +121,11 @@
           width: 30px;
           height: 30px;
           background-image: url("../icons/search_3.png");
+        }
+
+        &.search-cancel {
+          background-image: url("../icons/cancel_2.png");
+          background-color: #ffffff;
         }
       }
 

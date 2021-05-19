@@ -201,6 +201,7 @@
 
           <div class="search-buttons">
             <div class="search"></div>
+
             <div>
               <button
                 onclick="renderPopup('#popup3')"
@@ -220,466 +221,505 @@
           </div>
 
           <div id="main-table-container" class="main-table-container">
-            <table
-              id="main-table__header"
-              class="main-table main-table__header"
-            >
-              <tr>
-                <th class="main-table__checked">
-                  <div class="checkbox">
-                    <input
-                      id="main-table-select-all"
-                      class="checkbox-input"
-                      type="checkbox"
-                    />
-                    <label
-                      for="main-table-select-all"
-                      class="checkbox-label"
-                    ></label>
-                  </div>
-                </th>
-                <th class="main-table__max-name">
-                  <div class="header-item">
-                    <p>Полное наименование</p>
-                    <div class="th-sort-icon"></div>
-                  </div>
-                </th>
-                <th class="main-table__min-name">
-                  <div class="header-item">
-                    <p>Сокращённое наименование</p>
-                    <div class="th-sort-icon"></div>
-                  </div>
-                </th>
-                <th class="main-table__inn">
-                  <div class="header-item">
-                    <p>ИНН</p>
-                    <div class="th-sort-icon"></div>
-                  </div>
-                </th>
-                <th class="main-table__address">
-                  <div class="header-item">
-                    <p>Юридический адрес</p>
-                    <div class="th-sort-icon"></div>
-                  </div>
-                </th>
-              </tr>
-            </table>
-            <div class="main-table__items-container">
+            <div class="table">
               <table
-                id="main-table__items"
-                class="main-table main-table__items"
+                id="main-table__header"
+                class="main-table main-table__header"
               >
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
+                <tr>
+                  <th class="main-table__checked">
                     <div class="checkbox">
                       <input
-                        id="main-item1"
+                        id="main-table-select-all"
                         class="checkbox-input"
                         type="checkbox"
                       />
-                      <label for="main-item1" class="checkbox-label"></label>
+                      <label
+                        for="main-table-select-all"
+                        class="checkbox-label"
+                      ></label>
                     </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">0122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
+                  </th>
+                  <th class="main-table__max-name">
+                    <div class="header-item">
+                      <p>Полное наименование</p>
+                      <div class="th-sort-icon"></div>
                     </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item2"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item2" class="checkbox-label"></label>
+                  </th>
+                  <th class="main-table__min-name">
+                    <div class="header-item">
+                      <p>Сокращённое наименование</p>
+                      <div class="th-sort-icon"></div>
                     </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">1122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
+                  </th>
+                  <th class="main-table__inn">
+                    <div class="header-item">
+                      <p>ИНН</p>
+                      <div class="th-sort-icon"></div>
                     </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item3"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item3" class="checkbox-label"></label>
+                  </th>
+                  <th class="main-table__address">
+                    <div class="header-item">
+                      <p>Юридический адрес</p>
+                      <div class="th-sort-icon"></div>
                     </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">2122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item4"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item4" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">3122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item5"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item5" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">4122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item6"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item6" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">5122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item7"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item7" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">6122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item8"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item8" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">7122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item9"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item9" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">8122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="main-table__item">
-                  <td class="main-table__checked">
-                    <div class="checkbox">
-                      <input
-                        id="main-item10"
-                        class="checkbox-input"
-                        type="checkbox"
-                      />
-                      <label for="main-item10" class="checkbox-label"></label>
-                    </div>
-                  </td>
-                  <td class="main-table__max-name">
-                    МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
-                    "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА"
-                  </td>
-                  <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
-                  <td class="main-table__inn">9122333334</td>
-                  <td class="main-table__address">
-                    141108, обл. Московская, г. Щелково, ул. Краснознаменская,
-                    д.3
-                  </td>
-                  <td class="item__edit">
-                    <div class="item__edit-block">
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-hidden"
-                        onclick="hiddenRowTable(this)"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-edit"
-                        onclick="renderPopup('#popup3')"
-                      ></button>
-                      <button
-                        type="button"
-                        class="edit-block__btn btn-item-remove"
-                        onclick="removeRowTable(this)"
-                      ></button>
-                    </div>
-                  </td>
+                  </th>
                 </tr>
               </table>
+
+              <div class="search-box">
+                <input
+                  class="search-box__input search-full-name"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-min-name"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-inn"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+
+                <input
+                  class="search-box__input search-addres"
+                  type="text"
+                  placeholder="Введите текст..."
+                />
+              </div>
+
+              <div class="main-table__items-container">
+                <table
+                  id="main-table__items"
+                  class="main-table main-table__items"
+                >
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item1"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item1" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">0122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item2"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item2" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">1122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item3"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item3" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">2122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item4"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item4" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">3122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item5"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item5" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">4122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item6"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item6" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">5122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item7"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item7" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">6122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item8"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item8" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">7122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item9"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item9" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">8122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="main-table__item">
+                    <td class="main-table__checked">
+                      <div class="checkbox">
+                        <input
+                          id="main-item10"
+                          class="checkbox-input"
+                          type="checkbox"
+                        />
+                        <label for="main-item10" class="checkbox-label"></label>
+                      </div>
+                    </td>
+                    <td class="main-table__max-name">
+                      МУНИЦИПАЛЬНОЕ ПРЕДПРИЯТИЕ ГОРОДСКОГО ПОСЕЛЕНИЯ ЩЁЛКОВО
+                      "ДИРЕКЦИЯ ЕДИНОГО ЗАКАЗЧИКА ЖИЛИЩНО-КОММУНАЛЬНОГО
+                      ХОЗЯЙСТВА"
+                    </td>
+                    <td class="main-table__min-name">МП ГПЩ "ДЕЗ ЖКХ"</td>
+                    <td class="main-table__inn">9122333334</td>
+                    <td class="main-table__address">
+                      141108, обл. Московская, г. Щелково, ул. Краснознаменская,
+                      д.3
+                    </td>
+                    <td class="item__edit">
+                      <div class="item__edit-block">
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-hidden"
+                          onclick="hiddenRowTable(this)"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-edit"
+                          onclick="renderPopup('#popup6')"
+                        ></button>
+                        <button
+                          type="button"
+                          class="edit-block__btn btn-item-remove"
+                          onclick="removeRowTable(this)"
+                        ></button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -687,7 +727,6 @@
       <!-- /.content -->
 
       <section id="sidebar-360" class="sidebar-360">
-        <!-- <div id="sidebar-items-360" class="sidebar-items-360"> -->
         <button
           class="sidebar__item-360"
           onclick="sidebarBtn360(this)"
@@ -698,7 +737,7 @@
 
         <button
           class="sidebar__item-360"
-          onclick="sidebarBtn(this)"
+          onclick="sidebarBtn360(this)"
           type="button"
         >
           <div class="sidebar__item-img img2"></div>
@@ -706,7 +745,7 @@
 
         <button
           class="sidebar__item-360"
-          onclick="sidebarBtn(this)"
+          onclick="sidebarBtn360(this)"
           type="button"
         >
           <div class="sidebar__item-img img3"></div>
@@ -714,7 +753,7 @@
 
         <button
           class="sidebar__item-360"
-          onclick="sidebarBtn(this)"
+          onclick="sidebarBtn360(this)"
           type="button"
         >
           <div class="sidebar__item-img img4"></div>
@@ -722,16 +761,17 @@
 
         <button
           class="sidebar__item-360"
-          onclick="sidebarBtn(this)"
+          onclick="sidebarBtn360(this)"
           type="button"
         >
           <div class="sidebar__item-img img5"></div>
         </button>
-        <!-- </div> -->
       </section>
+      <!-- /.sidebar-360 -->
 
       <!-- popup 1 -->
       <div id="popup1" class="popup">
+        <a href="#section" class="popup__area"></a>
         <div class="popup__content message">
           <div class="popup__content-header">
             <p class="content__header-title">Сообщение</p>
@@ -741,150 +781,186 @@
           </div>
           <div class="popup__content-items">
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
-              </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-title">ЮРРОБОТ</p>
-                <p class="item__description-text">
-                  Кузовенковой Л.Н выставлен счет на оплату
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
-              <div class="item__time">
-                <p>19.01.1970 08:39</p>
+            </div>
+
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="popup__content-footer">
             <button type="button" class="btn btn-bright">Удалить все</button>
           </div>
@@ -892,6 +968,7 @@
       </div>
       <!-- popup 2 -->
       <div id="popup2" class="popup">
+        <a href="#section" class="popup__area"></a>
         <div class="popup__content message">
           <div class="popup__content-header">
             <p class="content__header-title">Сообщение</p>
@@ -899,104 +976,141 @@
               <img src="icons/close-icon.png" alt="close-icon" />
             </a>
           </div>
+
           <div class="popup__content-items">
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item selected">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
+
             <div class="item">
-              <div class="item__icon"></div>
-              <div class="item__description">
-                <p class="item__description-text">
-                  Подписание судебного приказа по ЭЦП
-                </p>
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="popup__content-footer">
             <button type="button" class="btn btn-bright">Удалить все</button>
           </div>
@@ -1004,6 +1118,7 @@
       </div>
       <!-- popup 3 -->
       <div id="popup3" class="popup">
+        <a href="#section" class="popup__area"></a>
         <div class="popup__content add-company">
           <div class="popup__content-header">
             <p class="content__header-title">ИНН организации</p>
@@ -1011,6 +1126,7 @@
               <img src="icons/close-icon.png" alt="close-icon" />
             </a>
           </div>
+
           <div class="popup__content-items">
             <div class="item">
               <input
@@ -1020,6 +1136,7 @@
               />
             </div>
           </div>
+
           <div class="popup__content-footer">
             <a href="#section" class="btn btn-bright">Отменить</a>
             <button
@@ -1034,6 +1151,7 @@
       </div>
       <!-- popup 4 -->
       <div id="popup4" class="popup">
+        <a href="#section" class="popup__area"></a>
         <div class="popup__content info">
           <div class="popup__content-header">
             <a href="#section" class="popup__close">
@@ -1053,6 +1171,7 @@
       </div>
       <!-- popup 5 -->
       <div id="popup5" class="popup">
+        <a href="#section" class="popup__area"></a>
         <div class="popup__content info">
           <div class="popup__content-header">
             <a href="#section" class="popup__close">
@@ -1067,6 +1186,62 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup 6 -->
+      <div id="popup6" class="popup">
+        <a href="#section" class="popup__area"></a>
+
+        <div class="popup__content edit-company">
+          <div class="popup__content-header">
+            <p class="content__header-title">МП ГПЩ "ДЕЗ ЖКХ"</p>
+
+            <a href="#section" class="popup__close">
+              <img src="icons/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+
+          <div class="popup__content-items">
+            <div class="popup-edit__header">
+              <button
+                class="
+                  popup-edit__btn
+                  popup-edit__btn-all-info
+                  popup-edit__btn-active
+                "
+              >
+                <div class="popup-edit__btn-title">
+                  <p>Общая информация</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+              <button class="popup-edit__btn popup-edit__btn-staff">
+                <div class="popup-edit__btn-title">
+                  <p>Сотрудники</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+              <button class="popup-edit__btn popup-edit__btn-docs">
+                <div class="popup-edit__btn-title">
+                  <p>Документы</p>
+                  <div class="popup-edit__btn-title-icon"></div>
+                </div>
+                <div class="btn-line"></div>
+              </button>
+            </div>
+
+            <!-- Контейнер для вкладки "Общая информация" -->
+            <div class="tab tab-all-info tab-active"></div>
+
+            <!-- Контейнер для вкладки "Сотрудники" -->
+            <div class="tab tab-staff"></div>
+
+            <!-- Контейнер для вкладки "Документы" -->
+            <div class="tab tab-docs"></div>
           </div>
         </div>
       </div>

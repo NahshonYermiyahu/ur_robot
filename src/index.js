@@ -63,6 +63,24 @@ function sidebarBtn(btn) {
 }
 //#endregion
 
+//#region // ! Выделение иконки в sidebar 360
+function sidebarBtn360(btn) {
+  const btns360 = document.getElementsByClassName("sidebar__item-360");
+  const sideBar360 = document.getElementById("sidebar-360");
+  if (sideBar360.classList.contains("activeSidebar")) {
+    for (let i of btns360) {
+      i.classList.remove("activeSidebar");
+    }
+    btn.classList.toggle("activeSidebar");
+  } else {
+    for (let i of btns360) {
+      i.classList.remove("activeSidebar");
+    }
+    btn.classList.toggle("activeSidebar");
+  }
+}
+//#endregion
+
 //#region // !  Изменение размера sidebar
 function changeSidebar(btn) {
   document.getElementById("sidebar").classList.toggle("minSidebar");
@@ -108,6 +126,17 @@ const inputs = document
 const check_all_rows = document.getElementById("main-table-select-all");
 
 let all_selected = false;
+
+const rows = document
+  .getElementById("main-table__items")
+  .getElementsByTagName("tr");
+for (let row of rows) {
+  row.addEventListener("click", () => {
+    row.children[0].children[0].children[0].checked =
+      !row.children[0].children[0].children[0].checked;
+    row.children[5].children[0].classList.toggle("edit-block-hidden");
+  });
+}
 
 check_all_rows.addEventListener("change", () => {
   if (check_all_rows.checked) {
@@ -229,5 +258,42 @@ function hiddenRowTable(btn) {
 //#region // ! обработка клика по кнопке удаления строки таблицы
 function removeRowTable(btn) {
   btn.parentElement.parentElement.parentElement.remove();
+}
+//#endregion
+
+//#region // ! Включение/выключение строки поиска в таблице
+const search = document.getElementsByClassName("search")[0];
+const searchBox = document.getElementsByClassName("search-box")[0];
+search.addEventListener("click", () => {
+  searchBox.classList.toggle("active-search-box");
+  search.classList.toggle("search-cancel");
+});
+//#endregion
+
+//#region // ! Активация кнопок popup6
+const tabsBtns = document.getElementsByClassName("popup-edit__btn");
+for (let btn of tabsBtns) {
+  btn.addEventListener("click", () => {
+    const btnIndex = Array.prototype.indexOf.call(
+      btn.parentElement.children,
+      btn
+    );
+
+    for (let b of tabsBtns) {
+      b.classList.remove("popup-edit__btn-active");
+    }
+
+    for (let i of btn.parentElement.parentElement.children) {
+      if (i.classList.contains("tab")) {
+        i.classList.remove("tab-active");
+      }
+    }
+
+    btn.parentElement.parentElement.children[1 + btnIndex].classList.toggle(
+      "tab-active"
+    );
+
+    btn.classList.toggle("popup-edit__btn-active");
+  });
 }
 //#endregion

@@ -115,6 +115,10 @@
 
       &:hover .dropdown-email__content {
         display: block;
+
+        @media only screen and (max-width: 360px) {
+          display: none;
+        }
       }
 
       .dropdown-email__content {
@@ -132,10 +136,6 @@
           0 5.5px 5px rgba(0, 0, 0, 0.237602);
         border-radius: 0 0 10px 10px;
         transition: all 2s;
-
-        @media only screen and (max-width: 360px) {
-          display: none;
-        }
 
         .dropdown-email__item {
           display: flex;
